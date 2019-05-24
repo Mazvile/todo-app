@@ -14,15 +14,15 @@ public class Todo {
     @GeneratedValue
     private long id;
 
-    private String text;
+    private String title;
 
     private boolean isCompleted;
 
     private Todo() {
     }
 
-    public Todo(String text) {
-        this.text = text;
+    public Todo(String title) {
+        this.title = title;
         this.isCompleted = false;
     }
 
@@ -30,7 +30,7 @@ public class Todo {
     public String toString() {
         return "Todo{" +
                 "id=" + id +
-                ", text='" + text + '\'' +
+                ", title='" + title + '\'' +
                 ", isCompleted=" + isCompleted +
                 '}';
     }

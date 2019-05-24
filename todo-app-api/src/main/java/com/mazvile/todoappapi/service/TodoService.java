@@ -15,7 +15,7 @@ public class TodoService {
     private TodoRepository repository;
 
     public Todo createTodo(Todo todo) {
-        return repository.save(new Todo(todo.getText()));
+        return repository.save(new Todo(todo.getTitle()));
     }
 
     public List<Todo> getAllTodos() {
