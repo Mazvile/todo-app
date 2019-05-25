@@ -26,8 +26,13 @@ public class TodoController {
     }
 
     @PutMapping("/{todoId}")
-    public Todo updateTodo(@PathVariable(value="todoId") String id, @RequestBody Todo updateTodo) {
+    public Todo updateTodo(@PathVariable(value = "todoId") String id, @RequestBody Todo updateTodo) {
         return service.updateTodo(updateTodo);
+    }
+
+    @DeleteMapping("/{todoId}")
+    public Todo deleteTodo(@PathVariable(value = "todoId") String id) {
+        return service.deleteTodo(Long.parseLong(id));
     }
 
 }

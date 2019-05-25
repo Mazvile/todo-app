@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class TodoService {
@@ -29,5 +30,14 @@ public class TodoService {
 
     public Todo updateTodo(Todo updateTodo) {
         return repository.save(updateTodo);
+    }
+
+    public Todo deleteTodo(Long id) {
+        Optional<Todo> maybeTodo = repository.findById(id);
+        if (maybeTodo.isPresent()) {
+            repository.deleteById(id);
+            return maybeTodo.get();
+        }
+        return null;
     }
 }
