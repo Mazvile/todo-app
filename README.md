@@ -1,2 +1,2 @@
 # todo-app
-Simple front-end app for task management
+Simple web app for task management with Angular and Springboot
