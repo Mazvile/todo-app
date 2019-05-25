@@ -26,4 +26,8 @@ public class TodoService {
         }
         return todos;
     }
+
+    public Todo updateTodo(Todo updateTodo) {
+        return repository.save(updateTodo);
+    }
 }

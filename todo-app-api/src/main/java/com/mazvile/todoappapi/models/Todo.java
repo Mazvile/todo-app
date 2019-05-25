@@ -16,14 +16,14 @@ public class Todo {
 
     private String title;
 
-    private boolean isCompleted;
+    private boolean completed;
 
     private Todo() {
     }
 
     public Todo(String title) {
         this.title = title;
-        this.isCompleted = false;
+        this.completed = false;
     }
 
     @Override
@@ -31,7 +31,7 @@ public class Todo {
         return "Todo{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
-                ", isCompleted=" + isCompleted +
+                ", completed=" + completed +
                 '}';
     }
 }
